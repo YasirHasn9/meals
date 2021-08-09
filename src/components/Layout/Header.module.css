@@ -1,0 +1,29 @@
+.header {
+    background-image: url("../../assets/images/meals.jpg");
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 350px;
+    background-size:cover;
+    background-position:center ;
+    color:#fff;
+    clip-path: polygon(30% 0%, 100% 0, 100% 30%, 100% 89%, 63% 93%, 26% 97%, 0 100%, 0 0);
+    z-index:10;
+}
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color:#7b0d0db8;
+    padding: 0 20px
+}
+
+.logo {
+    margin-left: 165px;
+}
+
+.cart {
+    margin-right: 180px;
+}
