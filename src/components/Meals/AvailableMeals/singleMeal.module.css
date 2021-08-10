@@ -1,0 +1,16 @@
+.single_meal{
+    padding: 2rem 0rem;
+    border-bottom: 1px solid #ddd;
+    font-weight: 700;
+}
+
+.single_meal div h3 {
+    margin: 0.7rem 0;
+    font-size: 2rem;
+}
+.price_meal {
+    color: coral;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 0.8rem;
+}

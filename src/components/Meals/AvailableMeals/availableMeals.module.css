@@ -1,0 +1,13 @@
+.available_meals {
+   position: absolute;
+   top: 60%;
+   left: 20%;
+}
+.available_meals ul {
+    list-style: none; 
+
+}
+.available_meals ul li {
+    margin: 1rem;
+    font-size: 1.6rem;
+}
