@@ -1,0 +1,23 @@
+.meals_summary {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 65rem;
+    height: 20.8rem;
+    background-color: #433b3b;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: -1px 0px 6px 2px #000;
+    color:#fff;
+    font-size: 1.6rem;
+}
+.meals_summary h2  {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin:1rem 0;
+}
+.meals_summary  p {
+    margin: 1rem;
+}
