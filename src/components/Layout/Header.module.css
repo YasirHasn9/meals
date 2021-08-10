@@ -9,7 +9,6 @@
     background-position:center ;
     color:#fff;
     clip-path: polygon(30% 0%, 100% 0, 100% 30%, 100% 89%, 63% 93%, 26% 97%, 0 100%, 0 0);
-    z-index:10;
 }
 .navbar {
     display:flex;
@@ -22,6 +21,9 @@
 
 .logo {
     margin-left: 165px;
+}
+.logo h1 {
+    font-size: 3rem;
 }
 
 .cart {
