@@ -9,7 +9,7 @@ export const SingleMeal = ({ meal }) => {
                 <i>{meal.description}</i>
                 <p className={classes.price_meal}>{price}</p>
             </div>
-            <MealForm />
+            <MealForm id={meal.id} />
         </li>
     );
 };

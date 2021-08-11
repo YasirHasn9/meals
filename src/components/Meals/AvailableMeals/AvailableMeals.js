@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Card } from "../../UI/Card/Card";
+import { Card } from "../../../common/UI/Card/Card      ";
 import classes from "./availableMeals.module.css";
 
 import { SingleMeal } from "./SingleMeal";
