@@ -1,4 +1,5 @@
 import classes from "./singleMeal.module.css";
+import { MealForm } from "./MealForm/MealForm";
 export const SingleMeal = ({ meal }) => {
     const price = `$${meal.price.toFixed(2)}`;
     return (
@@ -8,6 +9,7 @@ export const SingleMeal = ({ meal }) => {
                 <i>{meal.description}</i>
                 <p className={classes.price_meal}>{price}</p>
             </div>
+            <MealForm />
         </li>
     );
 };

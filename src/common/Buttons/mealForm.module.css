@@ -1,0 +1,13 @@
+.btn_meal_form {
+    background-color: #570606;
+    border:none;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    color:#fff;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+.btn_meal_form:hover {
+    background-color: #110603; 
+}

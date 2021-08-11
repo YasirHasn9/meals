@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { CartButton } from "../../common/Buttons/index";
+import { CartButton } from "../../common/Buttons/CartButton";
 import classes from "./Header.module.css";
 import MealsImage from "../../assets/images/meals.jpg";
 export const Header = () => (
