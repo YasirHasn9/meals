@@ -23,7 +23,12 @@
 
 .icon_cart_button {
     width:20px;
-    color:#fff
+    color:#fff;
+    border: 3px solid transparent;
+    border-radius: 1rem;
+}
+.icon_cart_button:hover {
+    border: 3px solid brown;
 }
 .number_cart_button {
     border-radius: 50%;
@@ -32,4 +37,13 @@
     width: 30px;
     text-align: center;
     line-height: 2;
+}
+.my_cart {
+    border: 3px solid transparent;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s;
+}
+.my_cart:hover {
+    border: 3px solid brown;
 }

@@ -1,10 +1,16 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Header } from "./components/Layout/Header";
 import { Meals } from "./components/Meals/Meals";
+import { Cart } from "./components/Cart/Cart";
+import { ModalProvider, useModal } from "./Containers/Context/ModalContext";
 function App() {
     return (
         <Fragment>
-            <Header />
+            <ModalProvider>
+                <Cart />
+                <Header />
+            </ModalProvider>
+
             <main>
                 <Meals />
             </main>

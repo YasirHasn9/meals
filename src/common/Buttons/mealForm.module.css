@@ -9,5 +9,6 @@
     transition: all 0.3s;
 }
 .btn_meal_form:hover {
-    background-color: #110603; 
+    background-color: #110603;
+    cursor: pointer; 
 }

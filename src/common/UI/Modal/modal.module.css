@@ -1,0 +1,21 @@
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000d6;
+    z-index: 30;
+}
+
+.modal {
+    position: fixed;
+    top:30%;
+    left:25%;
+    background: #fff;
+    width:50vw;
+    height: 15rem;
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+    z-index: 31;
+}
