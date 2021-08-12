@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Card } from "../../../common/UI/Card/Card      ";
+import { Card } from "../../../common/UI/Card/Card";
 import classes from "./availableMeals.module.css";
 
 import { SingleMeal } from "./SingleMeal";
@@ -34,13 +34,12 @@ export const AvailableMeals = () => {
         ],
         []
     );
-    console.log("hello", DUMMY_MEALS);
     return (
         <section className={classes.available_meals}>
             <Card>
                 <ul>
                     {DUMMY_MEALS.map((meal) => {
-                        return <SingleMeal meal={meal} key={meal.key} />;
+                        return <SingleMeal meal={meal} key={meal.id} />;
                     })}
                 </ul>
             </Card>

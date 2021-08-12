@@ -1,7 +1,8 @@
 .available_meals {
    position: absolute;
-   top: 60%;
+   top: 55%;
    left: 20%;
+   margin-bottom: 10rem;
 }
 .available_meals ul {
     list-style: none; 
