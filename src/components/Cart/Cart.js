@@ -6,15 +6,29 @@ import { useModal } from "../../Store/modalContext";
 export const Cart = () => {
     const { dispatchModalAction } = useModal();
     const store = useMealStore();
-    console.log(store);
     const { meals } = store;
+    const cartRemoveItem = (id) => {
+        store.removeMeal(id);
+    };
+    const cartItemAdd = (item) => {
+        store.addMeal({
+            ...item,
+            amount: 1,
+        });
+    };
+    // console.log("this is from the carty com", store.meals);
     return (
         <Modal>
             <ul className={classes.cart_list}>
-                {store.totalAmount > 0
+                {meals.length > 0
                     ? meals.map((meal) => {
                           return meal.amount > 0 ? (
-                              <CartItem key={meal.id} meal={meal} />
+                              <CartItem
+                                  key={meal.id}
+                                  meal={meal}
+                                  onRemove={cartRemoveItem.bind(null, meal.id)}
+                                  onAdd={cartItemAdd.bind(null, meal)}
+                              />
                           ) : null;
                       })
                     : null}

@@ -1,6 +1,7 @@
 import classes from "./cartItem.module.css";
-export const CartItem = ({ meal }) => {
-    console.log(meal);
+// import { useMealStore } from "../../Containers/Context/MealsContext";d
+export const CartItem = ({ meal, onAdd, onRemove }) => {
+    console.log("This is cart item", onRemove);
     return (
         <li className={classes.cart_item}>
             <div className={classes.cart_item_info}>
@@ -15,8 +16,12 @@ export const CartItem = ({ meal }) => {
                 </p>
             </div>
             <div className={classes.cart_item_btns}>
-                <button className={classes.cart_item_remove}>&#8211;</button>
-                <button className={classes.cart_item_add}>+</button>
+                <button onClick={onRemove} className={classes.cart_item_remove}>
+                    &#8211;
+                </button>
+                <button onClick={onAdd} className={classes.cart_item_add}>
+                    +
+                </button>
             </div>
         </li>
     );
