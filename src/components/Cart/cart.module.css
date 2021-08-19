@@ -36,3 +36,21 @@
     background-color: brown;
     color:#fff
 }
+
+.cart_list {
+    width: 100%;
+    padding: 1rem 0;
+}
+.cart_list li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cart_list li p {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.cart_list li p:last-child{
+    margin-right:2rem
+}

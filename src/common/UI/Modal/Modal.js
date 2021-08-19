@@ -1,13 +1,13 @@
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
 import classes from "./modal.module.css";
-import { useModal } from "../../../Containers/Context/ModalContext";
+import { useModal } from "../../../Store/modalContext";
 
 const Backdrop = (props) => {
-    const { dispatch } = useModal();
+    const { dispatchModalAction } = useModal();
     return (
         <div
-            onClick={() => dispatch({ type: "close" })}
+            onClick={() => dispatchModalAction({ type: "close" })}
             className={classes.backdrop}
         ></div>
     );
@@ -20,11 +20,6 @@ const ModalOverLay = (props) => (
 export const Modal = (props) => {
     let state = useModal();
     let toggleModal = state.state.open;
-    if (toggleModal) {
-        console.log("what");
-    } else {
-        console.log("do nothing");
-    }
     return (
         toggleModal && (
             <Fragment>

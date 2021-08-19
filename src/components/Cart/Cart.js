@@ -1,26 +1,38 @@
+import { CartItem } from "./CartItem";
 import { Modal } from "../../common/UI/Modal/Modal";
 import classes from "./cart.module.css";
-import { useModal } from "../../Containers/Context/ModalContext";
+import { useMealStore } from "../../Containers/Context/MealsContext";
+import { useModal } from "../../Store/modalContext";
 export const Cart = () => {
-    const cartItems = [{ id: "c1", name: "Sushi", amount: 2, price: 12.5 }].map(
-        (meal) => <li key={meal.id}>{meal.name}</li>
-    );
-    const { dispatch } = useModal();
+    const { dispatchModalAction } = useModal();
+    const store = useMealStore();
+    console.log(store);
+    const { meals } = store;
     return (
         <Modal>
-            <ul>{cartItems}</ul>
+            <ul className={classes.cart_list}>
+                {store.totalAmount > 0
+                    ? meals.map((meal) => {
+                          return meal.amount > 0 ? (
+                              <CartItem key={meal.id} meal={meal} />
+                          ) : null;
+                      })
+                    : null}
+            </ul>
             <div className={classes.meal_price}>
                 <span className={classes.total_amount}>Total Amount</span>
-                <span>$35.55</span>
+                <span>${store.totalAmount.toFixed(2)}</span>
             </div>
             <div className={classes.cart_items_btns}>
                 <button
-                    onClick={() => dispatch({ type: "close" })}
+                    onClick={() => dispatchModalAction({ type: "close" })}
                     className={classes.btn_close}
                 >
                     Close
                 </button>
-                <button className={classes.btn_order}>Order</button>
+                {store.totalAmount > 0 ? (
+                    <button className={classes.btn_order}>Order</button>
+                ) : null}
             </div>
         </Modal>
     );
